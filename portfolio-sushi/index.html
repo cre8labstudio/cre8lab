@@ -95,12 +95,10 @@ section{position:relative}
 .photos{padding:clamp(70px,10vh,120px) 0;background:var(--ink-2)}
 .sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:46px}
 .sec-head .h2{margin-top:16px}
-.tabs{display:inline-flex;padding:5px;border:1px solid var(--line);border-radius:999px;background:var(--ink)}
-.tab{padding:11px 22px;border-radius:999px;font-size:.86rem;font-weight:600;color:var(--rice-dim);transition:.3s;white-space:nowrap}
-.tab sup{font-size:.68rem;color:var(--rice-faint);margin-left:4px}
-.tab.active{background:var(--rice);color:var(--ink)}
-.tab.active sup{color:rgba(13,12,11,.5)}
-.tab-desc{color:var(--rice-dim);max-width:60ch;margin:-18px 0 36px;min-height:1.6em;transition:opacity .3s}
+.sub-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 28px;border-top:1px solid var(--line);padding-top:26px;margin:10px 0 28px}
+.masonry+.sub-head{margin-top:70px}
+.sub-head h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,3vw,2.6rem);line-height:1}
+.sub-head p{color:var(--rice-dim);max-width:60ch;min-width:0}
 .masonry{columns:3 320px;column-gap:16px}
 .tile{break-inside:avoid;margin-bottom:16px;position:relative;overflow:hidden;border-radius:6px;background:var(--ink-3);cursor:zoom-in;transition:opacity .7s ease}
 .tile.in{opacity:1;transform:none}
@@ -132,8 +130,7 @@ section{position:relative}
 
 /* ---------- HOW ---------- */
 .how{padding:clamp(90px,14vh,160px) 0}
-.how-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:end;margin-bottom:70px}
-@media (max-width:900px){.how-top{grid-template-columns:1fr}}
+.how-title{font-size:clamp(3.2rem,9vw,7.5rem);margin-bottom:56px}
 .steps{list-style:none;border-top:1px solid var(--line)}
 .step{display:grid;grid-template-columns:110px 1fr 1.3fr;gap:clamp(18px,4vw,60px);padding:38px 0;border-bottom:1px solid var(--line);align-items:start}
 .step .n{font-family:var(--serif);font-size:3.4rem;line-height:.9;color:var(--rice-faint);transition:color .4s}
@@ -219,7 +216,7 @@ body.curadoria .cur-name{display:block;position:absolute;top:8px;left:8px;font-s
   <div class="hero-kanji" aria-hidden="true">寿司</div>
   <div class="wrap hero-inner">
     <p class="eyebrow">Portfólio · Fotografia &amp; vídeo gastronômico</p>
-    <h1>Sushi se come <em>com os olhos</em> primeiro.</h1>
+    <h1>Sushi primeiro se come <em>com os olhos.</em></h1>
     <p class="lead">Fotos de cardápio, conteúdo para o Instagram e vídeos para restaurantes de culinária japonesa. Veja o que produzimos para o Onda Poke.</p>
     <div class="btns">
       <a href="#fotos" class="btn btn-primary">Ver o portfólio</a>
@@ -248,11 +245,6 @@ body.curadoria .cur-name{display:block;position:absolute;top:8px;left:8px;font-s
         <p class="lead">Fotografamos o cardápio do Onda Poke no próprio restaurante, com câmera e iluminação profissionais, e gravamos todo o preparo dos pratos. O resultado: fotos prontas para o cardápio e o delivery, imagens para o feed e um banco de vídeos curtos para reels e stories.</p>
       </div>
     </div>
-    <div class="stats rv">
-      <div class="stat"><b>43</b><small>Fotos editadas entregues</small></div>
-      <div class="stat"><b>39</b><small>B-rolls com tratamento de cor</small></div>
-      <div class="stat"><b>1</b><small>Dia de captação</small></div>
-    </div>
   </div>
 </section>
 
@@ -264,13 +256,17 @@ body.curadoria .cur-name{display:block;position:absolute;top:8px;left:8px;font-s
         <p class="eyebrow">Fotografia</p>
         <h2 class="h2">O prato como <em>protagonista.</em></h2>
       </div>
-      <div class="tabs rv" role="tablist">
-        <button class="tab active" role="tab" data-tab="cardapio">Cardápio<sup data-tabcount="cardapio"></sup></button>
-        <button class="tab" role="tab" data-tab="editorial">Editorial &amp; Redes<sup data-tabcount="editorial"></sup></button>
-      </div>
     </div>
-    <p class="tab-desc" id="tabDesc"></p>
-    <div class="masonry" id="gallery"></div>
+    <div class="sub-head rv">
+      <h3>Cardápio</h3>
+      <p>Cada prato isolado, com luz e enquadramento consistentes, pronto para cardápio físico, digital e apps de delivery.</p>
+    </div>
+    <div class="masonry" id="galCardapio"></div>
+    <div class="sub-head rv">
+      <h3>Editorial &amp; Redes</h3>
+      <p>Composições com vários pratos, detalhes das peças e cenas pensadas para o feed, os stories e as campanhas.</p>
+    </div>
+    <div class="masonry" id="galEditorial"></div>
     <div class="empty-note" id="photosEmpty">Nenhuma foto encontrada. Coloque os arquivos da pasta do Drive <code>Fotos/Editadas</code> dentro de <code>portfolio-sushi/fotos/</code>.</div>
   </div>
 </section>
@@ -308,13 +304,7 @@ body.curadoria .cur-name{display:block;position:absolute;top:8px;left:8px;font-s
 <!-- COMO FUNCIONA -->
 <section class="how" id="como-funciona">
   <div class="wrap">
-    <div class="how-top">
-      <div class="rv">
-        <p class="eyebrow">Como funciona</p>
-        <h2 class="h2" style="margin-top:16px">Sem pacote fechado. <em>Feito para o seu cardápio.</em></h2>
-      </div>
-      <p class="lead rv">Cada restaurante tem um cardápio, um ritmo e uma necessidade diferente. Por isso o trabalho começa entendendo o seu, e só depois a gente planeja a produção.</p>
-    </div>
+    <h2 class="h2 how-title rv">Como <em>funciona</em></h2>
 
     <ol class="steps">
       <li class="step rv">
@@ -421,50 +411,51 @@ const HERO_VIDEO = "20260919_C8LAB3320.mp4";
 // cat: "cardapio" = prato individual | "editorial" = vários pratos, detalhes, Instagram | "oculta" = não aparece
 const FOTOS = [
   {f:"DSC09737.jpg",cat:"cardapio"},
+  {f:"DSC09728.jpg",cat:"cardapio"},
+  {f:"DSC09763.jpg",cat:"cardapio"},
   {f:"DSC09812.jpg",cat:"cardapio"},
+  {f:"DSC09814.jpg",cat:"cardapio"},
   {f:"DSC09831.jpg",cat:"cardapio"},
+  {f:"DSC09823.jpg",cat:"cardapio"},
   {f:"DSC09837.jpg",cat:"cardapio"},
   {f:"DSC09855.jpg",cat:"cardapio"},
+  {f:"DSC09857.jpg",cat:"cardapio"},
   {f:"DSC09869.jpg",cat:"cardapio"},
   {f:"DSC09901-2.jpg",cat:"cardapio"},
+  {f:"DSC09895.jpg",cat:"cardapio"},
   {f:"DSC09906.jpg",cat:"cardapio"},
+  {f:"DSC09910-2.jpg",cat:"cardapio"},
   {f:"DSC09950-2.jpg",cat:"cardapio"},
+  {f:"DSC09825-2.jpg",cat:"cardapio"},
+  {f:"DSC09779.jpg",cat:"cardapio"},
   {f:"DSC09915-2.jpg",cat:"editorial"},
   {f:"DSC09866.jpg",cat:"editorial"},
   {f:"DSC09910.jpg",cat:"editorial"},
   {f:"DSC09917-2.jpg",cat:"editorial"},
   {f:"DSC09834.jpg",cat:"editorial"},
-  {f:"DSC09779-2.jpg",cat:"editorial"},
-  {f:"DSC09857.jpg",cat:"editorial"},
   {f:"DSC09874-2.jpg",cat:"editorial"},
+  {f:"DSC09779-2.jpg",cat:"editorial"},
   {f:"DSC09898.jpg",cat:"editorial"},
-  {f:"DSC09825-2.jpg",cat:"editorial"},
   {f:"DSC09814-2.jpg",cat:"editorial"},
   {f:"DSC09915.jpg",cat:"editorial"},
-  {f:"DSC09763.jpg",cat:"editorial"},
   {f:"DSC09831-2.jpg",cat:"editorial"},
   {f:"DSC09950.jpg",cat:"editorial"},
-  {f:"DSC09901.jpg",cat:"editorial"}
+  {f:"DSC09901.jpg",cat:"editorial"},
+  {f:"DSC09915-3.jpg",cat:"editorial"},
+  {f:"DSC09825.jpg",cat:"editorial"}
 ];
 
 // B-rolls (pasta do Drive: .../Vídeos/Editadas/Vídeos com cor)
 const VIDEOS = [
   "20260919_C8LAB3306.mp4","20260919_C8LAB3319.mp4","20260919_C8LAB3293.mp4","20260919_C8LAB3320.mp4",
   "20260919_C8LAB3302.mp4","20260919_C8LAB3315.mp4","20260919_C8LAB3297.mp4","20260919_C8LAB3322.mp4",
-  "20260919_C8LAB3289.mp4","20260919_C8LAB3311.mp4","20260919_C8LAB3326.mp4","20260919_C8LAB3305.mp4",
-  "20260919_C8LAB3329.mp4","20260919_C8LAB3294.mp4","20260919_C8LAB3324.mp4","20260919_C8LAB3290.mp4",
-  "20260919_C8LAB3316.mp4","20260919_C8LAB3310.mp4","20260919_C8LAB3301.mp4","20260919_C8LAB3295.mp4",
-  "20260919_C8LAB3330.mp4","20260919_C8LAB3313.mp4","20260919_C8LAB3299.mp4","20260919_C8LAB3318.mp4",
-  "20260919_C8LAB3327.mp4","20260919_C8LAB3325.mp4","20260919_C8LAB3312.mp4","20260919_C8LAB3288.mp4"
+  "20260919_C8LAB3326.mp4","20260919_C8LAB3305.mp4","20260919_C8LAB3329.mp4","20260919_C8LAB3316.mp4",
+  "20260919_C8LAB3294.mp4","20260919_C8LAB3324.mp4","20260919_C8LAB3290.mp4","20260919_C8LAB3318.mp4",
+  "20260919_C8LAB3301.mp4","20260919_C8LAB3295.mp4","20260919_C8LAB3327.mp4","20260919_C8LAB3317.mp4"
 ];
 const VIDEOS_OCULTOS = [];   // nomes de vídeos que não devem aparecer
 
 /* ===================================================================== */
-
-const TAB_DESC = {
-  cardapio: "Cada prato isolado, com luz e enquadramento consistentes, pronto para cardápio físico, digital e apps de delivery.",
-  editorial: "Composições com vários pratos, detalhes das peças e cenas pensadas para o feed, os stories e as campanhas."
-};
 
 const CUR_KEY = "portfolio-sushi-curadoria-v1";
 const params = new URLSearchParams(location.search);
@@ -492,8 +483,7 @@ hv.addEventListener("canplay", () => hv.classList.add("ready"), {once:true});
 hv.play().catch(() => {});
 
 /* ---------- fotos ---------- */
-const gallery = document.getElementById("gallery");
-let activeTab = "cardapio";
+const galleries = {cardapio: document.getElementById("galCardapio"), editorial: document.getElementById("galEditorial")};
 const tiles = [];
 
 FOTOS.forEach(({f}) => {
@@ -515,39 +505,28 @@ FOTOS.forEach(({f}) => {
     if (b) { overrides["f:" + f] = b.dataset.set; saveOverrides(); refreshPhotos(); return; }
     if (!curadoria) openLb(f);
   });
-  gallery.appendChild(t);
   tiles.push(t);
 });
 
 function refreshPhotos(){
-  let counts = {cardapio:0, editorial:0};
   tiles.forEach(t => {
     const c = catOf(t.dataset.f);
-    if (counts[c] !== undefined) counts[c]++;
-    // na curadoria, as ocultas continuam visíveis (apagadas) para poder trazê-las de volta
-    const show = c === activeTab || (curadoria && c === "oculta");
-    t.classList.toggle("hide", !show);
+    // na curadoria, as ocultas continuam visíveis (apagadas, no fim do Cardápio) para poder trazê-las de volta
+    const target = galleries[c] || (curadoria ? galleries.cardapio : null);
+    if (target) target.appendChild(t); else t.remove();
     t.classList.toggle("oculta", c === "oculta");
     t.querySelectorAll("[data-set]").forEach(b => b.classList.toggle("on", b.dataset.set === c));
   });
-  document.querySelectorAll("[data-tabcount]").forEach(s => s.textContent = counts[s.dataset.tabcount] || "");
   document.getElementById("photosEmpty").style.display = tiles.length ? "none" : "block";
-  document.getElementById("tabDesc").textContent = TAB_DESC[activeTab];
 }
-
-document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => {
-  document.querySelectorAll(".tab").forEach(x => x.classList.toggle("active", x === b));
-  activeTab = b.dataset.tab;
-  refreshPhotos();
-  tiles.forEach(t => { if (!t.classList.contains("hide")) { t.classList.remove("in"); requestAnimationFrame(() => io.observe(t)); } });
-}));
 refreshPhotos();
 
 /* ---------- lightbox ---------- */
 const lb = document.getElementById("lb"), lbImg = lb.querySelector("img"), lbCount = lb.querySelector(".count");
 let lbList = [], lbI = 0;
 function openLb(f){
-  lbList = tiles.filter(t => !t.classList.contains("hide")).map(t => t.dataset.f);
+  const t = tiles.find(x => x.dataset.f === f);
+  lbList = [...t.parentNode.querySelectorAll(".tile")].map(x => x.dataset.f);
   lbI = Math.max(0, lbList.indexOf(f));
   showLb(); lb.classList.add("open"); document.body.style.overflow = "hidden";
 }

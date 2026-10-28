@@ -6,8 +6,8 @@ fotos e vídeos inclusos e otimizados (≈16 MB no total). Pode copiar a pasta i
 área de trabalho como "Portfólio Sushi".
 
 O que tem aqui
-- fotos/   25 fotos selecionadas do ensaio Onda Poke (19/09), redimensionadas para 1600px
-- videos/  28 B-rolls da pasta "Vídeos com cor", em 720p, sem áudio, até 8 s (loop)
+- fotos/   33 fotos selecionadas do ensaio Onda Poke (19/09), redimensionadas para 1600px
+- videos/  20 B-rolls da pasta "Vídeos com cor", estabilizados, com cor realçada, 720p, sem áudio (loop)
            Os originais 4K continuam no Drive.
 
 Trocar seleção de fotos/vídeos
