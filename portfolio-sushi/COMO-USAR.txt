@@ -1,17 +1,20 @@
 PORTFÓLIO SUSHI · CRE8LAB
 =========================
 
-1) Baixe do Drive (0005_Onda Poke / Gravações / 2026 / Setembro / 19:09:2026):
-   - Fotos/Editadas            -> coloque os .jpg dentro de  fotos/
-   - Vídeos/Editadas/Vídeos com cor  -> coloque os .mp4 dentro de  videos/
-   Não renomeie os arquivos: a página procura pelos nomes originais.
+Abrir: dê dois cliques em index.html (Chrome, Safari ou Edge). Tudo já está dentro da pasta,
+fotos e vídeos inclusos e otimizados (≈16 MB no total). Pode copiar a pasta inteira para a
+área de trabalho como "Portfólio Sushi".
 
-2) Abra o index.html no Chrome. Pronto.
-   Foto ou vídeo que não estiver na pasta simplesmente não aparece.
+O que tem aqui
+- fotos/   25 fotos selecionadas do ensaio Onda Poke (19/09), redimensionadas para 1600px
+- videos/  28 B-rolls da pasta "Vídeos com cor", em 720p, sem áudio, até 8 s (loop)
+           Os originais 4K continuam no Drive.
 
-3) Curadoria (escolher quais fotos vão em "Cardápio", "Editorial & Redes" ou ficam ocultas):
-   abra  index.html?curadoria  — cada foto ganha botões. Ao terminar, clique em
-   "Copiar seleção" e cole no lugar da lista FOTOS dentro do index.html.
+Trocar seleção de fotos/vídeos
+- abra  index.html?curadoria  — cada foto ganha botões Cardápio / Editorial / Ocultar.
+  Ao terminar, clique em "Copiar seleção" e cole no lugar da lista FOTOS no index.html.
+- Para incluir uma foto nova: coloque o .jpg em fotos/ e adicione o nome na lista FOTOS.
 
-4) Contato do botão final: no começo do <script> do index.html, preencha
-   CONTATO.whatsapp (só números, ex. 5547999999999) e CONTATO.instagram.
+Contato do botão final
+- No começo do <script> do index.html, preencha CONTATO.whatsapp (só números,
+  ex. 5547999999999) e CONTATO.instagram.

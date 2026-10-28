@@ -1,5 +1,0 @@
-# mídias ficam só no computador (são grandes demais para o git)
-fotos/*
-videos/*
-!fotos/.gitkeep
-!videos/.gitkeep

@@ -247,8 +247,8 @@ body.curadoria .cur-name{display:block;position:absolute;top:8px;left:8px;font-s
       </div>
     </div>
     <div class="stats rv">
-      <div class="stat"><b data-count="photos">—</b><small>Fotos editadas</small></div>
-      <div class="stat"><b data-count="videos">—</b><small>B-rolls com cor</small></div>
+      <div class="stat"><b>43</b><small>Fotos editadas entregues</small></div>
+      <div class="stat"><b>39</b><small>B-rolls com tratamento de cor</small></div>
       <div class="stat"><b>1</b><small>Dia de captação</small></div>
     </div>
   </div>
@@ -412,68 +412,47 @@ const CONTATO = {
 };
 
 // Vídeo de fundo do topo (arquivo em videos/)
-const HERO_VIDEO = "20260919_C8LAB3331.mp4";
+const HERO_VIDEO = "20260919_C8LAB3320.mp4";
 
 // Fotos (pasta do Drive: Gravações/2026/Setembro/19:09:2026/Fotos/Editadas)
 // cat: "cardapio" = prato individual | "editorial" = vários pratos, detalhes, Instagram | "oculta" = não aparece
 const FOTOS = [
-  {f:"DSC09728.jpg",cat:"cardapio"},
   {f:"DSC09737.jpg",cat:"cardapio"},
-  {f:"DSC09763.jpg",cat:"cardapio"},
-  {f:"DSC09779.jpg",cat:"cardapio"},
-  {f:"DSC09779-2.jpg",cat:"editorial"},
   {f:"DSC09812.jpg",cat:"cardapio"},
-  {f:"DSC09814.jpg",cat:"cardapio"},
-  {f:"DSC09814-2.jpg",cat:"editorial"},
-  {f:"DSC09823.jpg",cat:"cardapio"},
-  {f:"DSC09823-2.jpg",cat:"editorial"},
-  {f:"DSC09825.jpg",cat:"cardapio"},
-  {f:"DSC09825-2.jpg",cat:"editorial"},
   {f:"DSC09831.jpg",cat:"cardapio"},
-  {f:"DSC09831-2.jpg",cat:"editorial"},
-  {f:"DSC09834.jpg",cat:"cardapio"},
-  {f:"DSC09834-2.jpg",cat:"editorial"},
   {f:"DSC09837.jpg",cat:"cardapio"},
   {f:"DSC09855.jpg",cat:"cardapio"},
-  {f:"DSC09857.jpg",cat:"cardapio"},
-  {f:"DSC09866.jpg",cat:"cardapio"},
-  {f:"DSC09866-2.jpg",cat:"editorial"},
   {f:"DSC09869.jpg",cat:"cardapio"},
-  {f:"DSC09874.jpg",cat:"cardapio"},
-  {f:"DSC09874-2.jpg",cat:"editorial"},
-  {f:"DSC09895.jpg",cat:"cardapio"},
-  {f:"DSC09898.jpg",cat:"cardapio"},
-  {f:"DSC09898-2.jpg",cat:"editorial"},
-  {f:"DSC09901.jpg",cat:"cardapio"},
-  {f:"DSC09901-2.jpg",cat:"editorial"},
+  {f:"DSC09901-2.jpg",cat:"cardapio"},
   {f:"DSC09906.jpg",cat:"cardapio"},
-  {f:"DSC09910.jpg",cat:"cardapio"},
-  {f:"DSC09910-2.jpg",cat:"editorial"},
-  {f:"DSC09915.jpg",cat:"cardapio"},
+  {f:"DSC09950-2.jpg",cat:"cardapio"},
   {f:"DSC09915-2.jpg",cat:"editorial"},
-  {f:"DSC09915-3.jpg",cat:"editorial"},
-  {f:"DSC09917.jpg",cat:"cardapio"},
+  {f:"DSC09866.jpg",cat:"editorial"},
+  {f:"DSC09910.jpg",cat:"editorial"},
   {f:"DSC09917-2.jpg",cat:"editorial"},
-  {f:"DSC09950.jpg",cat:"cardapio"},
-  {f:"DSC09950-2.jpg",cat:"editorial"},
-  {f:"DSC09964.jpg",cat:"cardapio"},
-  {f:"DSC09964-2.jpg",cat:"editorial"},
-  {f:"DSC09974.jpg",cat:"cardapio"},
-  {f:"DSC09974-2.jpg",cat:"editorial"}
+  {f:"DSC09834.jpg",cat:"editorial"},
+  {f:"DSC09779-2.jpg",cat:"editorial"},
+  {f:"DSC09857.jpg",cat:"editorial"},
+  {f:"DSC09874-2.jpg",cat:"editorial"},
+  {f:"DSC09898.jpg",cat:"editorial"},
+  {f:"DSC09825-2.jpg",cat:"editorial"},
+  {f:"DSC09814-2.jpg",cat:"editorial"},
+  {f:"DSC09915.jpg",cat:"editorial"},
+  {f:"DSC09763.jpg",cat:"editorial"},
+  {f:"DSC09831-2.jpg",cat:"editorial"},
+  {f:"DSC09950.jpg",cat:"editorial"},
+  {f:"DSC09901.jpg",cat:"editorial"}
 ];
 
 // B-rolls (pasta do Drive: .../Vídeos/Editadas/Vídeos com cor)
 const VIDEOS = [
-  "20260919_C8LAB3288.mp4","20260919_C8LAB3289.mp4","20260919_C8LAB3290.mp4","20260919_C8LAB3291.mp4",
-  "20260919_C8LAB3293.mp4","20260919_C8LAB3294.mp4","20260919_C8LAB3295.mp4","20260919_C8LAB3297.mp4",
-  "20260919_C8LAB3299.mp4","20260919_C8LAB3301.mp4","20260919_C8LAB3302.mp4","20260919_C8LAB3305.mp4",
-  "20260919_C8LAB3306.mp4","20260919_C8LAB3307.mp4","20260919_C8LAB3310.mp4","20260919_C8LAB3311.mp4",
-  "20260919_C8LAB3312.mp4","20260919_C8LAB3313.mp4","20260919_C8LAB3314.mp4","20260919_C8LAB3315.mp4",
-  "20260919_C8LAB3316.mp4","20260919_C8LAB3317.mp4","20260919_C8LAB3318.mp4","20260919_C8LAB3319.mp4",
-  "20260919_C8LAB3320.mp4","20260919_C8LAB3322.mp4","20260919_C8LAB3324.mp4","20260919_C8LAB3325.mp4",
-  "20260919_C8LAB3326.mp4","20260919_C8LAB3327.mp4","20260919_C8LAB3329.mp4","20260919_C8LAB3330.mp4",
-  "20260919_C8LAB3331.mp4","20260919_C8LAB3332.mp4","20260919_C8LAB3334.mp4","20260919_C8LAB3335.mp4",
-  "20260919_C8LAB3336.mp4","20260919_C8LAB3337.mp4","20260919_C8LAB3338.mp4"
+  "20260919_C8LAB3306.mp4","20260919_C8LAB3319.mp4","20260919_C8LAB3293.mp4","20260919_C8LAB3320.mp4",
+  "20260919_C8LAB3302.mp4","20260919_C8LAB3315.mp4","20260919_C8LAB3297.mp4","20260919_C8LAB3322.mp4",
+  "20260919_C8LAB3289.mp4","20260919_C8LAB3311.mp4","20260919_C8LAB3326.mp4","20260919_C8LAB3305.mp4",
+  "20260919_C8LAB3329.mp4","20260919_C8LAB3294.mp4","20260919_C8LAB3324.mp4","20260919_C8LAB3290.mp4",
+  "20260919_C8LAB3316.mp4","20260919_C8LAB3310.mp4","20260919_C8LAB3301.mp4","20260919_C8LAB3295.mp4",
+  "20260919_C8LAB3330.mp4","20260919_C8LAB3313.mp4","20260919_C8LAB3299.mp4","20260919_C8LAB3318.mp4",
+  "20260919_C8LAB3327.mp4","20260919_C8LAB3325.mp4","20260919_C8LAB3312.mp4","20260919_C8LAB3288.mp4"
 ];
 const VIDEOS_OCULTOS = [];   // nomes de vídeos que não devem aparecer
 
@@ -549,8 +528,6 @@ function refreshPhotos(){
     t.querySelectorAll("[data-set]").forEach(b => b.classList.toggle("on", b.dataset.set === c));
   });
   document.querySelectorAll("[data-tabcount]").forEach(s => s.textContent = counts[s.dataset.tabcount] || "");
-  const total = counts.cardapio + counts.editorial;
-  document.querySelector('[data-count="photos"]').textContent = total || "—";
   document.getElementById("photosEmpty").style.display = tiles.length ? "none" : "block";
   document.getElementById("tabDesc").textContent = TAB_DESC[activeTab];
 }
@@ -617,8 +594,6 @@ VIDEOS.forEach(name => {
 });
 function refreshVideos(){
   vtiles.forEach(t => t.classList.toggle("hide", vidHidden(t.dataset.v)));
-  const n = vtiles.filter(t => !vidHidden(t.dataset.v)).length;
-  document.querySelector('[data-count="videos"]').textContent = n || "—";
   document.getElementById("videosEmpty").style.display = vtiles.length ? "none" : "block";
 }
 refreshVideos();
